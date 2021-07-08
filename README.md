@@ -26,7 +26,6 @@ The processing was done using the following steps:
 * **06_analyze_clusters**
 	* 01_analyze.pl
 	* 02_count_codons.pl
-	* 03_count_GC.pl
 
 The steps must be run in the outlined order. Some of the steps are further explained below.
 

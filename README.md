@@ -19,10 +19,18 @@ This is a description of what was done rather than a full pipeline to reproduce 
 
 ## Processing
 
-### 00_download - Download the required data
+### 00_download - Download the required data from the piRNA cluster database
 
-1. **01_download_annotation.pl**: Download the cluster annotation and sequence data. This will download around 100 MB of data, which will require 40 MB in local storage space once completed and compressed. The script will download the files to the current directory as "piRNAclusters" and you will have to make sure that this directory is the "piRNAclusters" folder in the subsequent steps.
+* **01_download_annotation.pl**: Download the cluster annotation and sequence data. This will download around 100 MB of data, which will require 40 MB in local storage space once completed and compressed. The script will download the files to the current directory as "piRNAclusters" and you will have to make sure that this directory is the "piRNAclusters" folder in the subsequent steps.
 
-2. **02_download_libraries.pl**: Download the sequencing libraries. **WARNING: This will download around 17.14 GB of data, which will require 4.97 GB in local storage space once completed and compressed.** The script will download the files to the current directory as "pirna_unknown" and you will have to make sure that this directory is the "pirna_unknown" folder in the subsequent steps.
+* **02_download_libraries.pl**: Download the sequencing libraries. _WARNING: This will download around 17.14 GB of data, which will require 4.97 GB in local storage space once completed and compressed._ The script will download the files to the current directory as "pirna_unknown" and you will have to make sure that this directory is the "pirna_unknown" folder in the subsequent steps.
+
+### 01_correct_piCdb_mistakes
+### 02_create_reference
+### 03_alignment
+### 04_annotate_clusters
+### 05_select_reads
+### 06_analyze_clusters
+
 
 ## Process and analyze data

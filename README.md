@@ -1,4 +1,4 @@
-# 5prime_stop_paper
+# Analysis of piRNA cluster database
 
 ## Summary
 

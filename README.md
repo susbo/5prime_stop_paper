@@ -33,7 +33,7 @@ Please note that this is a description of what was done rather than a full pipel
 
 ### 00_download
 
-Download the required data from the piRNA cluster database.
+This step downloads all required data from the piRNA cluster database.
 
 * **01_download_annotation.pl**: Download the cluster annotation and sequence data. This will download around 100 MB of data, which will require 40 MB in local storage space once completed and compressed. The script will download the files to the current directory as "piRNAclusters" and you will have to make sure that this directory is the "piRNAclusters" folder in the subsequent steps.
 
@@ -41,7 +41,7 @@ Download the required data from the piRNA cluster database.
 
 ### 01_correct_piCdb_mistakes
 
-This step re-creates 12 fasta files that were empty in the piRNA cluster database.
+This step re-creates 12 cluster fasta files that were empty in the piRNA cluster database.
 
 * **01_download_reference_genomes.sh**: Download reference genomes.
 * **02_convert_gz_bgz.sh**: Convert genomes to bgz format to allow processing of compressed files.
@@ -50,26 +50,35 @@ This step re-creates 12 fasta files that were empty in the piRNA cluster databas
 
 ### 02_create_reference
 
-* **01_create_reference.sh**
+This step creates a bowtie index for each cluster fasta.
+
+* **01_create_reference.sh**: Create folder structure and bowtie indices.
 
 ### 03_alignment
 
-* **alignment.sh**
+This step aligns each library to the corresponding cluster index.
+
+* **01_alignment.sh**: Align each library to a cluster fasta.
 
 ### 04_annotate_clusters
 
-* **01_run_summary.sh**
-* **02_select_clusters.pl**
+This step identifies clusters that were expressed in the analyzed libraries (ovary or testis).
+
+* **01_run_summary.sh**: Summarize the number of reads mapping to each cluster strand as well as the 1U and 10A bias. 
+* **02_select_clusters.pl**: Select expressed piRNA clusters based on previous summary.
 
 ### 05_select_reads
 
-* **01_select_reads.pl**
+This step selects piRNAs mapping to the selected piRNA clusters.
+
+* **01_select_reads.pl**: Retrieve reads 24-31 nt mapping to selected clusters.
 
 ### 06_analyze_clusters
 
-* **01_analyze.pl**
-* **02_count_codons.pl**
-* **03_count_GC.pl**
+This step extracts data for downstream analysis.
+
+* **01_analyze.pl**: Retrieve sequence of selected piRNA clusters.
+* **02_count_codons.pl**: Count codons in clusters per species and library.
 
 
 

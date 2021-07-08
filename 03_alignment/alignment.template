@@ -1,0 +1,13 @@
+#!/bin/bash
+
+prefix="/mnt/scratcha/ghlab/sus/public_data/201002_piCdb/201012_align_libraries"
+mkdir -p $prefix/alignment
+
+species=`echo $1 | cut -d'.' -f1`
+
+ref="/mnt/scratcha/ghlab/sus/public_data/201002_piCdb/201012_align_libraries/references/$species/bowtie/clusters"
+
+R1=`ls /mnt/scratcha/ghlab/sus/public_data/201002_piCdb/pirna_unknown/fasta_unknown/$1.fa.gz`
+
+bowtie -y -f -M 1 --best --strata -S -p 20 --chunkmbs 2000 --nomaqround $ref <(zcat $R1) | samtools view -bSu - | samtools sort - > $prefix/alignment/$1.bam
+

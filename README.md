@@ -27,11 +27,13 @@ The processing was done using the following steps:
 
 The steps must be run in the outlined order. Some of the steps are further explained below.
 
-This is a description of what was done rather than a full pipeline to reproduce the results. In order to re-run the pipeline, minor edits would be required, such as updating paths in some of the scripts. Furthermore, the scripts assume that jobs can be submitted to a cluster using slurm, this may need editing depending on the local environment.
+Please note that this is a description of what was done rather than a full pipeline to reproduce the results. In order to re-run the pipeline, minor edits would be required, such as updating paths in some of the scripts. Furthermore, the scripts assume that jobs can be submitted to a cluster using slurm, this may need editing depending on the local environment.
 
 ## Processing
 
-### 00_download - Download the required data from the piRNA cluster database
+### 00_download
+
+Download the required data from the piRNA cluster database.
 
 * **01_download_annotation.pl**: Download the cluster annotation and sequence data. This will download around 100 MB of data, which will require 40 MB in local storage space once completed and compressed. The script will download the files to the current directory as "piRNAclusters" and you will have to make sure that this directory is the "piRNAclusters" folder in the subsequent steps.
 
@@ -39,10 +41,12 @@ This is a description of what was done rather than a full pipeline to reproduce 
 
 ### 01_correct_piCdb_mistakes
 
-* **01_download_reference_genomes.sh**
-* **02_convert_gz_bgz.sh**
-* **03_create_index.sh**
-* **04_extract_fasta.sh**
+This step re-creates 12 fasta files that were empty in the piRNA cluster database.
+
+* **01_download_reference_genomes.sh**: Download reference genomes.
+* **02_convert_gz_bgz.sh**: Convert genomes to bgz format to allow processing of compressed files.
+* **03_create_index.sh**: Create indices using samtools faidx.
+* **04_extract_fasta.sh**: Extract sequence of cluster regions.
 
 ### 02_create_reference
 

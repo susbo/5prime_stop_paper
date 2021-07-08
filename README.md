@@ -3,24 +3,24 @@ This repositority contains the code that was used to download, process and analy
 
 The processing was done using the following steps:
 
-* 00_download
+* **00_download**
 	* 01_download_annotation.pl
 	* 02_download_libraries.pl
-* 01_correct_piCdb_mistakes
+* **01_correct_piCdb_mistakes**
 	* 01_download_reference_genomes.sh
 	* 02_convert_gz_bgz_sh
 	* 03_create_index.sh
 	* 04_extract_fasta.sh
-* 02_create_reference
+* **02_create_reference**
 	* 01_create_reference.sh
-* 03_alignment
+* **03_alignment**
 	* alignment.sh
-* 04_annotate_clusters
+* **04_annotate_clusters**
 	* 01_run_summary.sh
 	* 02_select_clusters.pl
-* 05_select_reads
+* **05_select_reads**
 	* 01_select_reads.pl
-* 06_analyze_clusters
+* **06_analyze_clusters**
 	* 01_analyze.pl
 	* 02_count_codons.pl
 	* 03_count_GC.pl

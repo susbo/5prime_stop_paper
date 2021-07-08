@@ -71,11 +71,11 @@ This step identifies clusters that were expressed in the analyzed libraries (ova
 
 This step selects piRNAs mapping to the selected piRNA clusters.
 
-* **01_select_reads.pl**: Retrieve reads 24-31 nt mapping to selected clusters.
+* **01_select_reads.pl**: Retrieve 24-31 nt reads mapping to selected clusters.
 
 ### 06_analyze_clusters
 
-This step extracts data for downstream analysis.
+This step extracts cluster composition data for downstream analysis.
 
 * **01_analyze.pl**: Retrieve sequence of selected piRNA clusters.
 * **02_count_codons.pl**: Count codons in clusters per species and library.

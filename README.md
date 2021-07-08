@@ -80,5 +80,10 @@ This step extracts cluster composition data for downstream analysis.
 * **01_analyze.pl**: Retrieve sequence of selected piRNA clusters.
 * **02_count_codons.pl**: Count codons in clusters per species and library.
 
+## Authors
 
+* **Susanne Bornelöv** - [susbo](https://github.com/susbo)
 
+## Citation
+
+Information to be added.

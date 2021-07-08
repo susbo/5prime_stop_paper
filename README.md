@@ -3,10 +3,9 @@ This repositority contains the code used to download, process and analyze the pi
 
 The processing was done using the following steps:
 
-Download data:
-
-
-Process and analyze data:
+* 00_download
+	* 01_download_annotation.pl
+	* 02_download_libraries.pl
 * 01_correct_piCdb_mistakes
 * 02_create_reference
 * 03_alignment

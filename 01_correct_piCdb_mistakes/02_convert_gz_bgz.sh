@@ -8,6 +8,7 @@ do
 	echo $file
 	new=`echo $file | sed -e 's/.fa.gz/.fa.bgz/'`
 	zcat $file | bgzip -c > $new &
+	rm $file
 done
 
 wait

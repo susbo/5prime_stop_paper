@@ -43,7 +43,7 @@ This step downloads all required data from the piRNA cluster database.
 
 This step re-creates 12 cluster fasta files that were empty in the piRNA cluster database.
 
-* **01_download_reference_genomes.sh**: Download reference genomes.
+* **01_download_reference_genomes.sh**: Download reference genomes. **_WARNING: This step will download 5 GB of data._**
 * **02_convert_gz_bgz.sh**: Convert genomes to bgz format to allow processing of compressed files.
 * **03_create_index.sh**: Create indices using samtools faidx.
 * **04_extract_fasta.sh**: Extract sequence of cluster regions.

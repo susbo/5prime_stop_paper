@@ -1,4 +1,7 @@
 # 5prime_stop_paper
+
+## Summary
+
 This repositority contains the code that was used to download, process and analyze the piRNA cluster database.
 
 The processing was done using the following steps:
@@ -27,7 +30,7 @@ The processing was done using the following steps:
 
 The steps must be run in the outlined order. Some of the steps are further explained below.
 
-Please note that this is a description of what was done rather than a full pipeline to reproduce the results. In order to re-run the pipeline, minor edits would be required, such as updating paths in some of the scripts. Furthermore, the scripts assume that jobs can be submitted to a cluster using slurm, this may need editing depending on the local environment.
+Please note that this is a comprehensive description of what was done rather than a full pipeline to reproduce the results. In order to re-run the pipeline, minor edits would be required, such as updating paths in some of the scripts. Furthermore, the scripts assume that jobs can be submitted to a cluster using slurm, this may need editing depending on the local environment.
 
 ## Processing
 

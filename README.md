@@ -17,7 +17,7 @@ The processing was done using the following steps:
 * **02_create_reference**
 	* 01_create_reference.sh
 * **03_alignment**
-	* alignment.sh
+	* 01_alignment.sh
 * **04_annotate_clusters**
 	* 01_run_summary.sh
 	* 02_select_clusters.pl

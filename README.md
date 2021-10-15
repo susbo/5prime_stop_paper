@@ -21,9 +21,16 @@ The processing was done using the following steps:
 * **04_annotate_clusters**
 	* 01_run_summary.sh
 	* 02_select_clusters.pl
-* **05_select_reads**
+* **05_subsample**
+	* 01_deduplicate100.pl
+	* 02_compress100.sh
+	* 03_deduplicate1.pl
+	* 04_compress1.sh
+	* 05_deduplicate10.pl
+	* 06_compress10.sh
+* **06_select_reads**
 	* 01_select_reads.pl
-* **06_analyze_clusters**
+* **07_analyze_clusters**
 	* 01_analyze.pl
 	* 02_count_codons.pl
 
@@ -69,13 +76,22 @@ This step identifies clusters that were expressed in the analyzed libraries (ova
 * **01_run_summary.sh**: Summarize the number of reads mapping to each cluster strand as well as the 1U and 10A bias. 
 * **02_select_clusters.pl**: Select expressed piRNA clusters based on previous summary.
 
-### 05_select_reads
+### 05_subsample
+
+* **01_deduplicate100.pl**: Select at most 100 reads per 5' end position within selected clusters (only reads 24-31nt reported).
+* **02_compress100.sh**: Create compressed file with sequence and multiplicity for reads selected in 01.
+* **03_deduplicate1.pl**: Select at most 1 read per 5' end position within selected clusters (only reads 24-31nt reported).
+* **04_compress1.sh**: reate compressed file with sequence and multiplicity for reads selected in 03.
+* **05_deduplicate10.pl**: Select at most 10 reads per 5' end position within selected clusters (only reads 24-31nt reported).
+* **06_compress10.sh**: reate compressed file with sequence and multiplicity for reads selected in 05.
+
+### 06_select_reads
 
 This step selects piRNAs mapping to the selected piRNA clusters.
 
 * **01_select_reads.pl**: Retrieve 24-31 nt reads mapping to selected clusters.
 
-### 06_analyze_clusters
+### 07_analyze_clusters
 
 This step extracts cluster composition data for downstream analysis.
 

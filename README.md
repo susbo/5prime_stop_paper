@@ -78,6 +78,8 @@ This step identifies clusters that were expressed in the analyzed libraries (ova
 
 ### 05_subsample
 
+This step subsamples reads originating from the same genomic 5' end position.
+
 * **01_deduplicate100.pl**: Select at most 100 reads per 5' end position within selected clusters (only reads 24-31nt reported).
 * **02_compress100.sh**: Create compressed file with sequence and multiplicity for reads selected in 01.
 * **03_deduplicate1.pl**: Select at most 1 read per 5' end position within selected clusters (only reads 24-31nt reported).

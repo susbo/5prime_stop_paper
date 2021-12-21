@@ -106,4 +106,8 @@ This step extracts cluster composition data for downstream analysis.
 
 ## Citation
 
-Information to be added.
+Please cite the following paper is using this pipeline:
+
+An evolutionarily conserved stop codon enrichment at the 5’ ends of mammalian piRNAs
+Susanne Bornelöv, Benjamin Czech, Gregory J Hannon
+bioRxiv 2021.10.27.464999; doi: https://doi.org/10.1101/2021.10.27.464999 

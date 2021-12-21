@@ -2,7 +2,7 @@
 
 ## Summary
 
-This repositority contains the code that was used to download, process and analyze the piRNA cluster database.
+This repositority contains the code that was used to download, process and analyze the piRNA cluster database (https://www.smallrnagroup.uni-mainz.de/piRNAclusterDB).
 
 The processing was done using the following steps:
 
@@ -106,8 +106,11 @@ This step extracts cluster composition data for downstream analysis.
 
 ## Citation
 
-Please cite the following paper is using this pipeline:
+Please cite the following paper if you are using our pipeline:
 
 An evolutionarily conserved stop codon enrichment at the 5’ ends of mammalian piRNAs
 Susanne Bornelöv, Benjamin Czech, Gregory J Hannon
-bioRxiv 2021.10.27.464999; doi: https://doi.org/10.1101/2021.10.27.464999 
+bioRxiv 2021.10.27.464999; doi: https://doi.org/10.1101/2021.10.27.464999
+
+Please also refer to instructions on how to cite the piRNA cluster database:
+https://www.smallrnagroup.uni-mainz.de/piRNAclusterDB/
